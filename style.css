@@ -1,0 +1,84 @@
+body{
+    background-color: black;
+}
+.container{
+    height:400px;
+    width:400px;
+    background-color:transparent;
+    position:relative;
+   margin:auto;
+   
+}
+
+.orbit{
+    height:300px;
+    width:300px;
+    border:3px dotted rgb(81, 81, 104);
+    border-radius: 50%;
+    margin:auto;
+    position:absolute;
+    left:0;
+    right:0;
+    top: 0;
+    bottom:0;  
+    animation:spin 5s infinite linear; 
+}
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+.rocket{
+    background-color: rgb(216, 66, 141);
+    height:100px;
+    width:50px;
+    border-radius: 50% 50% 0 0;
+    position:relative;
+    left:-11px;
+    top:85px;
+    border:1px solid black;
+
+
+}
+
+.rocket::before{
+    position:absolute;
+    content:"";
+    background-color: rgb(97, 255, 244);
+    height:50px;
+    width:80px;
+    right:-15px;
+    bottom:0;
+    z-index: -1;
+    border-radius:50% 50% 0 0;
+
+}
+
+.rocket::after{
+    position:absolute;
+    background-color:rgb(97, 255, 244);
+    content:"";
+    height:10px;
+    width:20px;
+    right:16px;
+    bottom:-6px;
+    z-index:-1;
+}
+.window{
+    position:absolute;
+    height:20px;
+    width:20px;
+    background-color: rgb(32, 195, 135);
+    border-radius: 50%;
+    left:14px;
+    top:15px;
+    border:2px solid rgb(0, 0, 0);
+}
+img{
+    rotate:180deg;
+    width:80px;
+    height:100px;
+    top:104px;
+    position:absolute;
+    left:-8px;
+}
